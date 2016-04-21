@@ -65,26 +65,40 @@
 				</li>
 				<li>
 					<a class="basket-content" href="#">Пусто</a>
-					
-					<!--Здесь должна быть форма с товарами.
-					ПОКА НЕ ПОНИМАЮ КАК ОФОРМИТЬ ДАННУЮ ФОРМУ. Это таблица? Как попадают туда данные? Как происходит автоматизация? 
-
-					<form class="basket" action="#">
-					<table>
-						<tr>
-							<td></td>
-							<td></td>
-						</tr>
-					</table>
-						<button class="btn" type="submit">Войти</button>
-					</form>
-					-->
+					<div class="basket-form">
+						<form class="basket" action="#">
+							<table>
+								<tr>
+									<td><img src="#"></td>
+									<td><img src="#"></td>
+									<td>Пломбир с апельсиновым джемом</td>
+									<td>1,5 кг х 200 руб.</td>
+									<td>300 руб.</td>
+								</tr>
+								<tr>
+									<td><img src="#"></td>
+									<td><img src="#"></td>
+									<td>Клубничный пломбир с присыпкой  из белого шоколада</td>
+									<td>1,5 кг х 300 руб.</td>
+									<td>450 руб.</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>Итого:</td>
+									<td>750 руб.</td>
+								</tr>
+							</table>
+							<button class="btn" type="submit">Оформить заказ</button>
+						</form>
+					</div>
 				</li>
 			</ul>
 		</nav>
-		<div class="phone-number">
+		<div class="phones">
 			c 10 до 20, ежедневно<br>
-			<span>8 812 450-25-25</span>
+			<a href="88124502525">8 812 450-25-25</a>
 		</div>
 	</header>
 	<main>
@@ -154,46 +168,39 @@
 			</div>
 		</section>
 
-		<section name="hits">
-			<div class="hit-1">
-				<div>Хит</div>
-				<div>
-					<img src="picture-1">
-				</div>
+		<section name="hits product">
+			<div class="product-item">
+				<div class="hit-sign"></div><!--Для вставки фонового рисунка-Плашка "ХИТ"-->
+				<img src="picture-1">
 				<div>310 руб./кг</div>
 				<div>
 					<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 				</div>	
 			</div>
 
-			<div class="hit-2">
-				<div>Хит</div>
-				<div>
-					<img src="picture-2">
-				</div>
+			<div class="product-item">
+				<div class="hit-sign"></div>
+				<img src="picture-2">
 				<div>380 руб./кг</div>
 				<div>
-					<a href="#">Сливочно-кофейное с кусочками шоколада.</a>
+					<a href="#">Сливочно-кофейное с кусочками шоколада</a>
 				</div>	
 			</div>
-			<div class="hit-3">
-				<div>Хит</div>
-				<div>
-					<img src="picture-3">
-				</div>
+
+			<div class="product-item">
+				<div class="hit-sign"></div>
+				<img src="picture-3">
 				<div>355 руб./кг</div>
 				<div>
-					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада.</a>
+					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
 				</div>	
 			</div>
-			<div class="hit-4">
-				<div>Хит</div>
-				<div>
-					<img src="picture-3">
-				</div>
+			<div class="product-item">
+				<div class="hit-sign"></div>
+				<img src="picture-4">
 				<div>415 руб./кг</div>
 				<div>
-					<a href="#">Сливочное крем-брюле с карамельной подливкой.</a>
+					<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
 				</div>	
 			</div>
 		</section>
@@ -215,7 +222,7 @@
 
 		<div class="news">
 			<div class="hot">
-				<p> Новое в нашем блоге</p>
+				<div class="theme"> Новое в нашем блоге</div>
 				<a href="#">10 способов сервировки фруктовых щербетов к столу.</a>
 			</div>
 			<form class="subscription" action="#">
@@ -232,7 +239,13 @@
 			</div>
 			<div class="pin"></div>
 			<div class="contacts">
-				<p><span>Адрес главного офиса и офлайн магазина:</span> ул. Большая Конюшенная 19/8, Санкт-Петербург <span>Для заказов по телефону:</span> 8 812 450-25-25 <span>(с 10 до 20 ежедневно)</span></p>
+				<div class="description">Адрес главного офиса и офлайн магазина:</div>
+				<div class="data">ул. Большая Конюшенная 19/8, Санкт-Петербург</div>
+				<div class="description">Для заказов по телефону:</div>
+				<div class="data"> 
+					<a href="88124502525">8 812 450-25-25</a>
+				</div>
+				<div class="description">(с 10 до 20 ежедневно)</div>
 				<a class="btn" href="#">Форма обратной связи</a>
 			</div>
 		</div>
@@ -266,14 +279,22 @@
 		</section>
 
 		<section class="additional-links">
-			<div class="additional-links-left">
-				<a href="#">Для поставщиков</a>
-				<a href="#">О производстве</a>
-			</div>
-			<div class="additional-links-right">
-				<a href="#">Наши документы</a>
-				<a href="#">Экологические стандарты</a>
-			</div>
+			<ul class="additional-links-left">
+				<li>
+					<a href="#">Для поставщиков</a>
+				</li>
+				<li>
+					<a href="#">О производстве</a>
+				</li>
+			</ul>
+			<ul class="additional-links-right">
+				<li>
+					<a href="#">Наши документы</a>
+				</li>
+				<li>
+					<a href="#">Экологические стандарты</a>
+				</li>
+			</ul>
 		</section>
 
 		<section class="authors">
