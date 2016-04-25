@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Роман Ткаченко](https://up.htmlacademy.ru/htmlcss/13/user/197571).
-* Наставник: [Ilya Borisenko](https://htmlacademy.ru/profile/id39390).
+* Наставник: [Николай Пойманов](https://htmlacademy.ru/profile/id23280).
 
 ---
 
