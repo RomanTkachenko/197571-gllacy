@@ -1,8 +1,294 @@
-body {
-	font-size: 16px;
-	line-height:1.375;
-	color:rgb(0,0,0);
-	font-weight: normal;
-	font-family: "Roboto", Arial, sans-serif;
+body, html, header, .container {
+	margin: 0;
+	padding: 0;
+	border: 0px ;
+}
+.clearfix {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+html {
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.container {
+	width: 95.4%;
+	margin-right:auto;
+	margin-left: auto;
+	padding-right:2.3%;
+	padding-left:2.3%;
+	background-color: rgb(132,157,143);
+}
+nav {
+	width:100%;
+	background-color: teal;
+}
+.logo {
+	float:left;
+}
+.left-menu {
+	float:left;
+}
+.left-menu li {
+	display: inline-block;
+}
+.left-menu li:first-child {
+	position: relative;
+}
+.sub-menu {
+	position: absolute;
+	display: none;
+}
+.right-menu {
+	float:right;
+}
+.right-menu li {
+	display: inline-block;
+	position: relative;
+}
+.search-form {
+	position: absolute;
+	display: none;
+}
+.intrance-form {
+	position: absolute;
+	display: none;
+}
+.basket-form {
+	position: absolute;
+	display: none;
+}
+.phones {
+	text-align: right;
+}
+
+/********************************************************************************************
+Слайдер
+********************************************************************************************/
+
+.slider {
+	position: relative;
+}
+.slider input[type=radio] {
+	display: none;
+}
+.slide-inner{
+	overflow:hidden;
+}
+.slider-slides{
+	width:300%;
+	background-color: yellow;
+}
+.slide1 {
+	width:33.3%;
+	float: left;
+	text-align:center;
+}
+.slide2 {
+	width:33.3%;
+	float: left;
+	text-align:center;
+}
+.slide3 {
+	width:33.3%;
+	float: left;
+	text-align:center;
+}
+.slider-controls {
+	position: absolute;
+	width: 300%;
+	left: 20px;
+	bottom: 100px;
+	z-index:100;
+}
+.slider-controls label {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 3px;
+	background: #ccc;
+	cursor: pointer;   
+	border: 4px solid white;
+	border-radius: 50%;    
+	box-shadow: 0px 0px 2px rgba(0,0,0,.8);     
+	transition: background-color .2s;
+}
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] { 
+	background-color: #666;
+}
+#btn-1:checked ~ .slide-inner .slider-slides {
+	transform: translate(0);
+}
+#btn-2:checked ~ .slide-inner .slider-slides {
+	transform: translate(-33.3%);
+}
+#btn-3:checked ~ .slide-inner .slider-slides {
+	transform: translate(-66.6%);
+}
+/********************************************************************************************************************/
+.banners {background-color: blue;}
+.banner-1 {
+	float:left;
+	width: 48.847%;
+	background: url("../img/raspberries-fill.jpg") no-repeat;
+}
+.banner-2 {
+	float:right;
+	width: 48.847%;
+	background: url("../img/chocolate-fill.jpg") no-repeat;
+}
+
+.hits {
+	background-color: red;
+}
+.hit-1,
+.hit-2,
+.hit-3,
+.hit-4 {
+	float:left;
+	width:23.2705%;
+	margin-right:2.306%;
+}
+.hit-4 {
+	margin-right: 0;
+}
+.hit-1-image {
+	background: url("../img/item-1(hit-1).jpg") no-repeat 50% 50%;
+	border:0.5px solid rgb(132,157,143);
+	border-radius:50%;
+	padding: 49.5%;
+}
+.hit-2-image {
+	background: url("../img/item-2(hit-2).jpg") no-repeat 50% 50%;
+	border:0.5px solid rgb(132,157,143);
+	border-radius:50%;
+	padding: 49.5%;
+}
+.hit-3-image {
+	background: url("../img/item-3(hit-3).jpg") no-repeat 50% 50%;
+	border:0.5px solid rgb(132,157,143);
+	border-radius:50%;
+	padding: 49.5%;
+}
+.hit-4-image {
+	background: url("../img/item-4(hit-4).jpg") no-repeat 50% 50%;
+	border:0.5px solid rgb(132,157,143);
+	border-radius:50%;
+	padding: 49.5%;
+}
+
+.production-info {
+	padding-right: 1.8344%;
+	padding-left: 1.8344%;
+	background: url("../img/fill-pattern-2.gif") repeat;
+	margin-bottom: 20px;
+}
+.features{
+	background-color: yellow;
+}
+.left-side {
+	float: left;
+	width: 48.966%;
+	background-color: green;
+}
+.right-side {
+	float: right;
+	width: 48.966%;
+	background-color: green;
+}
+
+.news{
+	background-color: pink;
+	margin-bottom: 20px;
+
+}
+
+.hot {
+	float:left;
+	width: 48.847%;
+	background: url("../img/strawberry-fill.jpg") no-repeat;
+}
+.subscription {
+	float:right;
+	width: 48.847%;
+	background-color: rgb(248,247,244);
+	border-image: url("../img/fill-pattern-1.png") repeat;
+	border: 5px solid black;
+	box-sizing:border-box;
+}
+.location{
+	width:104.8218%;
+	margin-left: -2.4107%;
+	position:relative;
+	background-color: orange;
+}
+.contacts {
+	position:absolute;
+	top:0;
+	right:0;
+	background-color: red;
+}
+.feedback {
+	position:fixed;
+	left:50%;
+	top:50%;
+	background-color: white;
+}
+
+.main-footer {
+	background-color: teal;
+}
+.footer-social {
+	float: left;
+}
+.additional-links {
+	float: left;
+}
+.authors {
+	float: right;
+}
+/************************************************************************************************************
+Gllacy-catalog.html
+*************************************************************************************************************/
+.breadcrumbs {
+	background-color: yellow;
+}
+.breadcrumbs li {
+	display: inline-block;
+}
+form {
+	background-color: blue;
+	margin-bottom: 20px;
+}
+.filter-item {
+	display: inline-block;
+	background-color: red;
+}
+.product-item {
+	display: inline-block;
+	width:267px;
+	font-size:16px;
+	vertical-align:top;
+	margin-right: 25.5px;
+	text-align:center;
+}
+.product-item:nth-child(4n){
+	margin-right: 0;
+}
+.product {
+	font-size:0px;
+}
+
+.pagination-list {
+	background-color: yellow;
+	margin-bottom: 20px;
+}
+.pagination-item {
+	display:inline-block;
 }
 

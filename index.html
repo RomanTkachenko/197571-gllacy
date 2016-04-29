@@ -5,13 +5,14 @@
 	<title>Глейси</title>
 	<link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li>
-					<img src="img/16_logo.svg" width="154" height="64" alt="Магазин мороженного Глейси">
-				</li>
+	<header class="container">
+		<nav class="clearfix">
+			<div class="logo">
+				<img src="img/logo.svg" width="154" height="64" alt="Магазин мороженного Глейси">
+			</div>
+			<ul class="left-menu">
 				<li>
 					<a href="#">Каталог</a>
 					<ul class="sub-menu">
@@ -39,7 +40,7 @@
 					<a href="#">О Компании</a>
 				</li>
 			</ul>
-			<ul>
+			<ul class="right-menu">
 				<li>
 					<a href="#">Поиск</a>
 					<div class="search-form">
@@ -70,15 +71,15 @@
 						<form class="basket" action="#">
 							<table>
 								<tr>
-									<td><img src="img/43_Х (for forms).svg" width="11" height="11"></td>
-									<td><img src="img/41_small-pict-1(for form).jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+									<td><img src="img/Х-mark(for-forms).svg" width="11" height="11"></td>
+									<td><img src="img/small-pict-1(for-form).jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
 									<td>Пломбир с апельсиновым джемом</td>
 									<td>1,5 кг х 200 руб.</td>
 									<td>300 руб.</td>
 								</tr>
 								<tr>
-									<td><img src="img/43_Х (for forms).svg" width-"11" height="11"></td>
-									<td><img src="img/42_small-pict-2(for form).jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой  из белого шоколад"></td>
+									<td><img src="img/Х-mark(for-forms).svg" width-"11" height="11"></td>
+									<td><img src="img/small-pict-2(for-form).jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой  из белого шоколад"></td>
 									<td>Клубничный пломбир с присыпкой из белого шоколада</td>
 									<td>1,5 кг х 300 руб.</td>
 									<td>450 руб.</td>
@@ -101,27 +102,41 @@
 			c 10 до 20, ежедневно<br>
 			<a href="tel:88124502525">8 812 450-25-25</a>
 		</div>
-	</header>
-	<main>
-		<div class="slider">
-			<div class="slider-inner">
-				<div class="slider-slides">
 
-					<article class="order order1">
-						<div class="order-image">
-							<img src="img/01_ice-cream-set1.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом">
-						</div >
+	</header>
+
+	<main class="container">
+		<div class="slider">
+			
+			<input type="radio" id="btn-1" name="toggle" checked>
+			<input type="radio" id="btn-2" name="toggle">
+			<input type="radio" id="btn-3" name="toggle">
+
+			<div class="slider-controls">
+				<label for="btn-1"></label>
+				<label for="btn-2"></label>
+				<label for="btn-3"></label>
+			</div> 
+			
+			<div class="slide-inner">
+
+				<div class="slider-slides clearfix">
+					
+					<div class="slide1">
+						<div class="photo-set">
+							<img src="img/ice-cream-set1.png" width="647" height="584" alt="333"> 
+						</div>
 						<div class="order-name">
 							<h1>Крем-брюле и пломбир с малиновым джемом</h1>
 						</div>
 						<div class="order-button">
 							<a class="btn" href="#">Давайте оба</a>
 						</div>
-					</article>
-
-					<article class="order order2">
-						<div class="order-image">
-							<img src="img/02_ice-cream-set2.png"  width="644" height="582" alt="Шоколадный пломбир и лимонный сорбет">
+					</div>
+					
+					<div class="slide2">
+						<div class="photo-set">
+							<img src="img/ice-cream-set2.png" width="644" height="584"> 
 						</div>
 						<div class="order-name">
 							<h1>Шоколадный пломбир и лимонный сорбет</h1>
@@ -129,11 +144,11 @@
 						<div class="order-button">
 							<a class="btn" href="#">Давайте оба</a>
 						</div>
-					</article>
+					</div>
 
-					<article class="order order3">
-						<div class="order-image">
-							<img src="img/03_ice-cream-set3.png" width="639" height="582" alt="Пломбир с помадкой и клубничный щербет">
+					<div class="slide3">
+						<div class="photo-set">
+							<img src="img/ice-cream-set3.png" width="639" height="584"> 
 						</div>
 						<div class="order-name">
 							<h1>Пломбир с помадкой и клубничный щербет</h1>
@@ -141,22 +156,13 @@
 						<div class="order-button">
 							<a class="btn" href="#">Давайте оба</a>
 						</div>
-					</article>
+					</div>
 
 				</div> 
-
-				<input type="radio" id="btn-1" name="toggle" checked>
-				<input type="radio" id="btn-2" name="toggle">
-				<input type="radio" id="btn-3" name="toggle">
 			</div>
-			<div class="slider-controls">
-				<label for="btn-1"></label>
-				<label for="btn-2"></label>
-				<label for="btn-3"></label>
-			</div>               
 		</div> 
 
-		<section name="baners">
+		<div class="banners clearfix">
 			<div class="banner-1">
 				<h3>Малинка даром!</h3>
 				<p>При покупке 2кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -167,61 +173,64 @@
 				<p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
 				<a class="btn" href="#">Хочу шоколадки!</a>
 			</div>
-		</section>
+		</div>
 
-		<section name="hits product">
-			<div class="product-item">
-				<div class="hit-sign"></div><!--Для вставки фонового рисунка-Плашка "ХИТ"-->
-				<img src="img/04_item-1(hit-1).jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+		<div class="hits clearfix">
+			<div class="hit-1">
+				<div class="hit-sign">ХИТ</div>
+				<div class="hit-1-image">
+					<!---<img src="img/item-1(hit-1).jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">-->
+				</div>
 				<div>310 руб./кг</div>
 				<div>
 					<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 				</div>	
 			</div>
 
-			<div class="product-item">
-				<div class="hit-sign"></div>
-				<img src="img/05_item-2(hit-2).jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+			<div class="hit-2">
+				<div class="hit-sign">ХИТ</div>
+				<div class="hit-2-image">
+					<!--<img src="img/item-2(hit-2).jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">-->
+				</div>
 				<div>380 руб./кг</div>
 				<div>
 					<a href="#">Сливочно-кофейное с кусочками шоколада</a>
 				</div>	
 			</div>
-
-			<div class="product-item">
-				<div class="hit-sign"></div>
-				<img src="img/06_item-3(hit-3).jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+			<div class="hit-3">
+				<div class="hit-sign">ХИТ</div>
+				<div class="hit-3-image">
+					<!--<img src="img/item-3(hit-3).jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">-->
+				</div>
 				<div>355 руб./кг</div>
 				<div>
-					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>s
 				</div>	
 			</div>
-			<div class="product-item">
-				<div class="hit-sign"></div>
-				<img src="img/07_item-4(hit-4).jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+			<div class="hit-4">
+				<div class="hit-sign">ХИТ</div>
+				<div class="hit-4-image">
+					<!--<img src="img/item-4(hit-4).jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">-->
+				</div>
 				<div>415 руб./кг</div>
 				<div>
 					<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
 				</div>	
 			</div>
-		</section>
-
-		<article>
+		</div>
+		<div class="production-info">
 			<h2>Магазин Глейси  — это онлайн и офлайн магазин по продаже мороже</h2>
-			<div class="features">
-				<div class="features-leftside">
-					<div class="features-leftside-item1">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</div>
-					<div class="features-leftside-item2">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</div>
-				</div>
-				<div class="features-rightside">
-					<div class="features-rightside-item1">закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</div>
-					<div class="features-rightside-item2">Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженному растаять в пути и позволет ему сохранить свой превосходный вкус.</div>
-				</div>
+			<div class="features block-1 clearfix">
+				<div class="left-side">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</div>
+				<div class="right-side">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</div>
 			</div>
-			<!--Вставку пиктограмм в данном блоке планирую осуществить с помощью фона-->
-		</article>
+			<div class="features block-2 clearfix">
+				<div class="left-side">Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</div>
+				<div class="right-side">Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженному растаять в пути и позволет ему сохранить свой превосходный вкус.</div>
+			</div>
+		</div>
 
-		<div class="news">
+		<div class="news clearfix">
 			<div class="hot">
 				<div class="theme"> Новое в нашем блоге</div>
 				<a href="#">10 способов сервировки фруктовых щербетов к столу.</a>
@@ -236,7 +245,7 @@
 
 		<div class="location">
 			<div class="map">
-				<img src="img/17_map.jpg" width="1200" height="430" alt="Месторасположение на карте">
+				<img src="img/map.jpg" width="1200" height="430" alt="Месторасположение на карте">
 			</div>
 			<div class="pin"></div>
 			<div class="contacts">
@@ -261,7 +270,7 @@
 
 	</main>
 	
-	<footer>
+	<footer class="main-footer container clearfix">
 		<section class="footer-social">
 			<ul class="social-list">
 				<li class="social-item">
@@ -300,7 +309,7 @@
 
 		<section class="authors">
 			<div class="author-logo">
-				<a href="#"> <img src="img/20_logo of html academy.svg" width="108" height="37" alt="HTML Academy"></a>
+				<a href="#"> <img src="img/logo-htmlAcademy.svg" width="108" height="37" alt="HTML Academy"></a>
 			</div>
 			<p>Сделано в <a href="#">HTML Academy</a> © 2016 </p>
 		</section>
