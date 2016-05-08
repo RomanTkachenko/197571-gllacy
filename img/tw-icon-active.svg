@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31.375" height="31.4" viewBox="0 0 31.375 31.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="398.75" y="2391.16" width="31.375" height="31.4" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#eaeaea" flood-opacity="0.99"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Твитер_копія_2" data-name="Твитер копія 2" class="cls-1" d="M414.427,2391.17a15.69,15.69,0,1,1-15.692,15.69A15.688,15.688,0,0,1,414.427,2391.17Zm9.138,10.81a7.336,7.336,0,0,1-2.092.57,3.662,3.662,0,0,0,1.6-2.02,7.4,7.4,0,0,1-2.313.89,3.644,3.644,0,0,0-6.206,3.32,10.318,10.318,0,0,1-7.508-3.81,3.655,3.655,0,0,0,1.128,4.87,3.678,3.678,0,0,1-1.65-.46c0,0.02,0,.03,0,0.05a3.652,3.652,0,0,0,2.922,3.57,3.781,3.781,0,0,1-.959.13,3.872,3.872,0,0,1-.686-0.07,3.644,3.644,0,0,0,3.4,2.53,7.291,7.291,0,0,1-4.524,1.56,8.3,8.3,0,0,1-.869-0.05,10.355,10.355,0,0,0,15.947-8.73c0-.16,0-0.31-0.011-0.47A7.337,7.337,0,0,0,423.565,2401.98Z" transform="translate(-398.75 -2391.16)"/>
+</svg>
