@@ -3,6 +3,7 @@ body {
 	line-height: 1.2;
 	font-weight: 400;
 	font-family: "Roboto", "Arial", sans-serif;
+	min-width:1200px;
 }
 body>input[type="radio"] {
 	display:none;
@@ -60,7 +61,7 @@ nav {
 	display:inline-block;
 	position:relative;
 	margin-left:0px;
-	padding:16px 0px;
+	padding:13px 0px;
 	vertical-align: top;
 }
 .main-menu>li>a{
@@ -172,7 +173,7 @@ nav {
 	padding-bottom: 8px;
 	vertical-align: middle;
 	font-weight: 500;
-	background-color: #a1b4a9;
+	background-color: rgba(255,255,255,0.2);
 	text-decoration:none;
 	border-radius:14px;
 }
@@ -185,7 +186,7 @@ nav {
 	position:relative;
 	font-size:0px;
 	border-radius:50%;
-	background: #a1b4a9 url("../img/magnifier.svg") no-repeat;
+	background: rgba(255,255,255,0.2) url("../img/magnifier.svg") no-repeat;
 	background-position: center;
 }
 .search-btn a:hover{
@@ -304,7 +305,7 @@ nav {
 	box-shadow: inset 0 2px 2px rgba(148,39,24,1);
 	color:#fceeec
 }
-.basket-btn a {
+.basket-btn>a {
 	width:117px;
 	padding-left: 43px;
 	padding-right: 16px;
@@ -312,7 +313,7 @@ nav {
 	position: relative;
 }
 
-.basket-btn a::before {
+.basket-btn>a::before {
 	content:"";
 	position: absolute;
 	background: url("../img/basket.svg") no-repeat;
@@ -321,7 +322,7 @@ nav {
 	left:16px;
 	top:6px;
 }
-.basket-btn a:hover::after {
+.basket-btn>a:hover::after {
 	content:"";
 	position: absolute;
 	background: url("../img/basket-black.svg") no-repeat;
@@ -379,11 +380,8 @@ nav {
 	font-size: 15px;
 	line-height: 18px;
 }
+.table-btn {text-align: right;}
 
-.basket-form .btn {
-	display:block;
-	margin-left:auto;
-}
 .basket-btn:hover .basket-form  {
 	display:block;
 }
@@ -546,12 +544,8 @@ nav {
 .hits .hit-mark {
 	position:absolute;
 	width:61px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	height:61px;
 	border-radius:50%;
-	font-size:31px;
-	line-height: 31px;
-	color: #000000;
 	background-color: #ffffff;
 }
 .item-price {
@@ -780,7 +774,21 @@ nav {
 .phone-number {
 	margin-bottom: 23px;
 }
-
+/***Всплывающая форма обратной связи***/
+@keyframes bounce {
+	0% { 
+		transform:translateY(-2000px);
+	}
+	70% {
+		transform:translateY(30px);
+	}
+	90% {
+		transform:translateY(-10px);
+	}
+	100% {
+		transform:translateY(0);
+	}
+}
 .modal-content {
 	position: fixed;
 	box-sizing:border-box;
@@ -795,7 +803,7 @@ nav {
 	padding-left: 25px;
 	background-color: #f8f7f4;
 	border-radius: 15px;
-	z-index: 20;
+	z-index: 200;
 	display: none;
 }
 .modal-content-close {
@@ -824,6 +832,10 @@ nav {
 }
 .modal-content-close::after {
 	transform:rotate(-45deg);
+}
+.modal-content-show {
+	display:block;
+	animation: bounce 0.6s;
 }
 .feedback-form {
 	margin: 0;
@@ -873,11 +885,14 @@ nav {
 	position:fixed;
 	top: 0;
 	left: 0;
-	z-index: 10;
+	z-index: 100;
 	width: 100%;
 	height: 100%;
 	background: rgba(0,0,0,0.3);
 	display: none;
+}
+.modal-overlay-show{
+	display:block;
 }
 
 /********************************************************************************************************/
@@ -1265,7 +1280,8 @@ Gllacy-catalog.html
 }
 .product-area {
 	display: inline-block;
-	width:267px;
+	box-sizing:border-box;
+	width:277px;
 	font-size:16px;
 	vertical-align:top;
 	margin-left: 12.5px;
@@ -1274,32 +1290,12 @@ Gllacy-catalog.html
 	padding-top: 5px;
 	padding-left: 5px;
 	padding-right: 5px;
+	padding-bottom: 20px;
+	margin-bottom: -40px;
 }
 .view-btn{
-	position:absolute;
-	z-index:10;
-	display:none;
+	visibility:hidden;
 	width:100%;
-	margin-left: -5px;
-	padding-bottom: 20px;
-}
-
-.product-area:hover .product-name {
-	text-decoration: none;
-}
-.product-area:hover .view-btn {
-	display:block;
-	background-color: rgba(255,255,255,0.2);
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-}
-.product-area:hover {
-	background-color: rgba(255,255,255,0.2);
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-	
-	box-shadow: 0 20px 20px rgba(0,0,0,0.4);
-
 }
 .product-area .product-name {
 	display:inline-block;
@@ -1312,6 +1308,21 @@ Gllacy-catalog.html
 	margin-bottom: 10px;
 	text-decoration: underline;
 }
+.product-area:hover .product-name {
+	text-decoration: none;
+}
+.product-area:hover .view-btn {
+	visibility:visible;
+}
+.product-area:hover {
+	background-color: rgba(248,247,244,0.3);
+	border-radius: 4px;
+	border-radius: 4px;
+	box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+	z-index:10;
+}
+
+
 .pagination-list {
 	margin: 0;
 	padding: 0;
