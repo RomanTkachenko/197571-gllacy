@@ -3,8 +3,7 @@ body {
 	line-height: 1.2;
 	font-weight: 400;
 	font-family: "Roboto", "Arial", sans-serif;
-	min-width:1200px;
-}
+	}
 body>input[type="radio"] {
 	display:none;
 }
@@ -14,7 +13,7 @@ body>input[type="radio"] {
 	clear:both;
 }
 .site-wrapper {
-	width:1200px;
+	min-width:1200px;
 	margin-right: auto;
 	margin-left: auto;
 	background-repeat: no-repeat;
@@ -38,6 +37,8 @@ body>input[type="radio"] {
 	padding-right:27px;
 	padding-left:27px;
 	padding-top: 9px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 nav {
