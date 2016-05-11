@@ -3,7 +3,7 @@ body {
 	line-height: 1.2;
 	font-weight: 400;
 	font-family: "Roboto", "Arial", sans-serif;
-	}
+}
 body>input[type="radio"] {
 	display:none;
 }
@@ -40,7 +40,6 @@ body>input[type="radio"] {
 	margin-left: auto;
 	margin-right: auto;
 }
-
 nav {
 	width:100%;
 }
@@ -70,7 +69,7 @@ nav {
 	font-size: 16px;
 	line-height: 18px;
 	padding: 7px 12px;
-	border-radius:14px;
+	border-radius:18px;
 	color:#ffffff;
 	font-weight: 700;
 }
@@ -98,12 +97,13 @@ nav {
 	background-color: #f8f7f4;
 	z-index:20;
 	margin: 0;
-	padding: 0;
-	padding: 7px 0;
 	margin-top: 5px;
+	padding: 0;
+	padding-bottom: 8px;
 	border-radius: 4px;
 	box-shadow: 0 20px 20px rgba(0,0,0,0.4);
 	display:none;
+	
 }
 .main-menu li li {
 	display: block;
@@ -115,7 +115,7 @@ nav {
 	font-weight: 700;
 	font-size:14px;
 	line-height: 14px;
-	padding:5px 0 14px 0;
+	padding:5px 0 7px 0;
 	position:relative;
 }
 .sub-menu li:first-child::after {
@@ -164,8 +164,12 @@ nav {
 	display:inline-block;
 	position:relative;
 	vertical-align: top;
-	padding-top: 16px;
+	padding-top: 13px;
 	padding-bottom: 16px;
+	margin-right:6px;
+}
+.right-menu>li:last-child {
+	margin-right: 0;
 }
 .right-menu>li>a{
 	display: inline-block;
@@ -176,7 +180,7 @@ nav {
 	font-weight: 500;
 	background-color: rgba(255,255,255,0.2);
 	text-decoration:none;
-	border-radius:14px;
+	border-radius:18px;
 }
 .right-menu>li>a:hover {
 	color:#323232;
@@ -195,11 +199,12 @@ nav {
 	background-position: center;	
 }
 .search-form {
+	box-sizing:border-box;
 	position:absolute;
-	left:-341px;
-	width:341px;
+	left:-310px;
+	width:340px;
 	background-color: #f8f7f4;
-	padding: 21px 16px;
+	padding: 20px 15px;
 	margin-top: 5px;
 	border-radius: 4px;
 	box-shadow: 0 20px 20px rgba(0,0,0,0.4);
@@ -212,7 +217,11 @@ nav {
 	width:100%;
 	border-radius:4px;
 	border:1px solid #d3d3d2;
-	padding: 9px 14px;
+	padding-left: 14px;
+	padding-top: 8px;
+	padding-bottom: 10px;
+	padding-right: 14px;
+
 }
 .search-btn:hover .search-form {
 	display:block;
@@ -238,23 +247,26 @@ nav {
 	background: url("../img/login-black.svg") no-repeat;
 	width:21px;
 	height:19px;
-	left:16px;
+	left:15px;
 	top:6px;
 }
 .login-form {
-	position:absolute;
-	left:-216px;
-	width:277px;
+	position: absolute;
+	left: -183px;
+	width: 240px;
 	background-color: #f8f7f4;
-	padding: 21px 16px;
+	padding-top: 20px;
+	padding-right: 17px;
+	padding-bottom: 20px;
+	padding-left: 20px;
 	margin-top: 5px;
 	border-radius: 4px;
 	box-shadow: 0 20px 20px rgba(0,0,0,0.4);
-	font-size:14px;
+	font-size: 14px;
 	line-height: 24px;
 	color: #999999;
-	z-index:20;
-	display:none;
+	z-index: 20;
+	display: none;
 }
 .login-btn:hover .login-form  {
 	display:block;
@@ -265,7 +277,10 @@ nav {
 	width:100%;
 	border-radius:4px;
 	border:1px solid #d3d3d2;
-	padding: 9px 14px;
+	padding-top: 7px;
+	padding-right: 14px;
+	padding-bottom: 11px;
+	padding-left: 13px;
 	margin-bottom: 20px;
 }
 .intrance-btn {
@@ -278,16 +293,20 @@ nav {
 .intrance-links a {
 	display:block;
 	font-size: 13px;
-	line-height: 24px;
+	line-height: 21px;
 	color:#323232;
 }
 
 .btn {
 	display:inline-block;
 	font-size: 18px;
-	line-height: 24px;
+	line-height: 20px;
+	font-weight: 700;
 	color: #ffffff;
-	padding: 11px 25px;
+	padding-top: 11px;
+	padding-bottom: 14px;
+	padding-left: 23px;
+	padding-right: 23px;
 	border-radius: 100px;
 	border:none;
 	background: #f26843;
@@ -295,6 +314,10 @@ nav {
 	box-shadow: 0 1px 2px rgba(172,16,0,1);
 	cursor:pointer;
 	text-decoration: none;
+	margin-right: 4px;
+}
+a, .btn, textarea, input, select, button, option {
+	outline:none;
 }
 .btn:hover {
 	background: linear-gradient(to top,#ec6f5e 0%,#f58669 100%);
@@ -308,72 +331,81 @@ nav {
 }
 .basket-btn>a {
 	width:117px;
-	padding-left: 43px;
+	padding-left: 44px;
 	padding-right: 16px;
 	box-sizing: border-box;
 	position: relative;
 }
 
 .basket-btn>a::before {
-	content:"";
+	content: "";
 	position: absolute;
-	background: url("../img/basket.svg") no-repeat;
-	width:21px;
-	height:20px;
-	left:16px;
-	top:6px;
+	background: url("../img/basket-full.png") no-repeat;
+	width: 21px;
+	height: 20px;
+	left: 16px;
+	top: 6px;
 }
 .basket-btn>a:hover::after {
-	content:"";
+	content: "";
 	position: absolute;
-	background: url("../img/basket-black.svg") no-repeat;
-	width:21px;
-	height:20px;
-	left:16px;
-	top:6px;
+	background: url("../img/basket-full.png") no-repeat;
+	width: 21px;
+	height: 20px;
+	left: 16px;
+	top: 6px;
 }
 .basket-form {
-	position:absolute;
-	left:-423px;
-	width:509px;
+	position: absolute;
+	left: -423px;
+	width: 513px;
 	background-color: #f8f7f4;
-	padding: 21px 16px 21px 15px;
+	padding: 20px 12px 0px 15px;
 	margin-top: 5px;
 	border-radius: 4px;
 	box-shadow: 0 20px 20px rgba(0,0,0,0.4);
-	font-size:14px;
+	font-size: 14px;
 	line-height: 24px;
 	color: #999999;
-	z-index:20;
-	display:none;
+	z-index: 20;
+	display: none;
 }
-.basket-table{
-	border-spacing: 0;
+.basket-table {
 	border-collapse: collapse;
-	font-size:13px;
+	font-size: 13px;
 	line-height: 16px;
 	margin-bottom: 12px;
+	width: 100%;
 }
-.basket-table td{
-	
-}
+.basket-table td {vertical-align: top;}
+
 .col-1 {
+	padding-top: 10px;
 	padding-right: 10px;
+	padding-bottom: 16px;
 }
-.col-2 {
-	padding-right: 13px;
-}
-.col-3 {
-	padding-right: 25x;
-	max-width:220px;
-}
-.col-4 {
-	padding-right:10px;
-}
-.col-5 {
-	text-align: center;
-}
+.col-2{
+	padding-right: 5px;
+	padding-bottom: 16px;
+}	
+.col-3{
+	padding-top:8px;
+	padding-right:12px;
+	width: 230px;
+	padding-bottom: 16px;
+}	
+.col-4{
+	padding-top: 8px;
+	padding-right: 10px;
+	padding-bottom: 16px;
+}	
+.col-5{
+	padding-top: 8px;
+	padding-bottom: 16px;
+	padding-right: 10px;
+}	
 .total-row {
+	padding-top: 15px;
 	text-align: right;
 	border-top: 1px solid #cacac7;
 	color: #333333;
@@ -381,21 +413,28 @@ nav {
 	font-size: 15px;
 	line-height: 18px;
 }
-.table-btn {text-align: right;}
-
+.table-btn {
+	text-align: right;
+	margin-bottom: 21px;
+}
+.table-btn .btn {
+	padding-left: 14px;
+	padding-right: 14px;
+}
 .basket-btn:hover .basket-form  {
-	display:block;
+	display: block;
 }
 
 .phones {
 	text-align: right;
 	font-size: 14px;
-	line-height: 16px;
+	line-height: 14px;
+	font-weight: 700;
 	color: #ffffff;
 }
 .phones a {
 	font-size: 22px;
-	line-height: 24px;
+	line-height: 33px;
 	font-weight: 900;
 	color: #ffffff;
 	text-decoration: none;
@@ -407,10 +446,10 @@ nav {
 
 .slider {
 	position: relative;
-	padding-top:280px;
+	padding-top:270px;
 	text-align: center;
 	color: #ffffff;
-	margin-bottom: 40px;
+	margin-bottom: 42px;
 }
 .slide {
 	display: none;
@@ -421,11 +460,12 @@ nav {
 	margin-bottom: 30px;
 	font-weight: 900;
 	font-size:60px;
+	line-height: 60.35px;
 }
 .slide-btn {
 	display: inline-block;
 	vertical-align: top;
-	padding: 12px 50px;
+	padding: 10px 41px;
 	font-weight: 700;
 	font-size:32px;
 	line-height: 44px;
@@ -450,7 +490,7 @@ nav {
 .slider-controls {
 	position: absolute;
 	left: 0;
-	bottom: 25px;
+	bottom: 21px;
 	z-index:20;
 }
 .slider-controls label {
@@ -458,7 +498,7 @@ nav {
 	vertical-align: top;
 	width: 17px;
 	height: 17px;
-	margin-right: 8px;
+	margin-right: 4px;
 	background-color: transparent;
 	border: 2px solid #ffffff;
 	border-radius: 50%;    
@@ -495,37 +535,52 @@ nav {
 /********************************************************************************************************************/
 .banners {
 	font-size: 18px;
-	line-height: 22px;
+	line-height: 21px;
 	color: #ffffff;
 	font-weight: 700;
 	width: 1146px;
-	margin-bottom: 20px;
+	margin-bottom: 41px;
 }
 .banners h3 {
 	padding: 0;
 	margin: 0;
 	font-size: 35px;
 	line-height: 41px;
+	font-weight: 700;
+	margin-bottom: 17px;
 }
 .banner-1 {
 	float: left;
-	width: 520px;
-	padding:23px 20px 23px 20px;
+	box-sizing:border-box;
+	width: 560px;
+	padding:14px 17px 14px 17px;
 	background: #732541 url("../img/raspberries-fill.jpg") no-repeat;
 	border-radius:15px;
 }
 .banner-2 {
 	float: right;
-	width: 520px;
-	padding:23px 20px 23px 20px;
+	box-sizing:border-box;
+	width: 560px;
+	padding:14px 17px 14px 17px;
 	background: #43271b url("../img/chocolate-fill.jpg") no-repeat;
 	border-radius:15px;
+}
+.banner-text {
+	padding-left: 2px;
+	padding-right: 8px;
+	margin-bottom: 46px;
+}
+.wrap-to-right {
+	text-align: right;
+}
+.banners .wrap-to-right {
+	margin-bottom: 9px;
 }
 
 /**********************************************************************************************************************/
 .hits {
 	color: #ffffff;
-	margin-bottom: 35px;
+	margin-bottom: 39px;
 
 }
 .hit-1,
@@ -541,6 +596,7 @@ nav {
 }
 .hit-image {
 	position:relative;
+	margin-bottom: 9px;
 }
 .hits .hit-mark {
 	position:absolute;
@@ -551,14 +607,16 @@ nav {
 }
 .item-price {
 	position:absolute;
-	bottom: 20px;
+	bottom: 12px;
 	left: 0;
-	background-color: ;
 	font-size:45px;
 	line-height: 45px;
 	text-shadow: 0 1px 3px rgba(49,50,53,0.5);
 	font-weight: 700;
 	color:#ffffff;
+}
+.item-price img{
+	margin-bottom: -3px;
 }
 .item-price span {
 	font-size: 30px;
@@ -592,77 +650,84 @@ nav {
 
 /**********************************************************************************************************************/
 .production-info {
-	padding: 20px 20px;
+	padding-top: 23px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-bottom: 26px;
 	background: #eddfc7 url("../img/fill-pattern-2.gif") repeat;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
+	border-radius: 14px;
 }
 .production-info h2 {
 	margin: 0;
-	bottom: 0;
+	padding:  0;
 	font-size: 24px;
+	font-weight: 500;
 	line-height: 30px;
 	color: #323232;
-	margin-bottom: 20px;
+	margin-bottom: 11px;
 }
-
 .block-1,
 .block-2 {
-	width:100%;
+	width: 100%;
 	font-size: 16px;
 	line-height: 22px;
 	color: #323232;
 }
+.block-1 {
+	margin-bottom: 12px;
+}
 .left-side {
 	float: left;
-	width: 484px;
-	padding-left: 56px;
-	padding-top: 12px;
-	padding-bottom: 12px;
+	box-sizing: border-box;
+	width: 540px;
+	padding: 10px 0px 0px 56px;
 	position: relative;
+	margin-right: 26px;
+
 }
 .right-side {
-	float: right;
-	width: 484px;	
-	padding-left: 56px;
-	padding-top: 12px;
-	padding-bottom: 12px;
+	float: left;
+	box-sizing: border-box;
+	width: 540px;
+	padding: 10px 3px 0px 56px;
 	position: relative;
 }
 .block-1 .left-side::before {
 	content: "";
 	position: absolute;
-	width:48px;
-	height:48px;
+	width: 48px;
+	height: 48px;
 	background: url("../img/ice-cream.svg") no-repeat;
 	left: 0;
-	top:0;
+	top: 0;
 }
 .block-1 .right-side::before {
 	content: "";
 	position: absolute;
-	width:48px;
-	height:48px;
+	width: 48px;
+	height: 48px;
 	background: url("../img/cow.svg") no-repeat;
 	left: 0;
-	top:0;
+	top: 0;
 }
 .block-2 .left-side::before {
 	content: "";
 	position: absolute;
-	width:48px;
-	height:48px;
+	width: 48px;
+	height: 48px;
 	background: url("../img/leaf.svg") no-repeat;
 	left: 0;
-	top:0;
+	top: 0;
 }
 .block-2 .right-side::before {
 	content: "";
 	position: absolute;
-	width:48px;
-	height:48px;
+	width: 48px;
+	height: 48px;
 	background: url("../img/thermo.svg") no-repeat;
 	left: 0;
-	top:0;
+	top: 0;
 }
 
 /**********************************************************************************************************************/
@@ -674,9 +739,10 @@ nav {
 }
 .hot {
 	float: left;
-	width: 285px;
-	min-height: 174px;
-	padding: 23px 255px 23px 20px;
+	width: 560px;
+	box-sizing:border-box;
+	min-height: 220px;
+	padding: 21px 200px 23px 20px;
 	border-radius: 15px;
 	background: #ffffff url("../img/strawberry-fill.jpg") no-repeat;
 }
@@ -685,6 +751,7 @@ nav {
 	line-height: 22px;
 	font-weight: 500;
 	color: #323232;
+	margin-bottom: 5px;
 }
 .hot a {
 	display:block;
@@ -695,9 +762,10 @@ nav {
 }
 .subscription {
 	margin: 0;
+	box-sizing:border-box;
 	padding: 5px;
 	float:right;
-	width: 550px;
+	width: 560px;
 	min-height: 210px;
 	background: #fe9e90 url("../img/fill-pattern-1.png");
 	border-radius: 15px;
@@ -705,9 +773,9 @@ nav {
 .subscription-form{
 	box-sizing: border-box;
 	margin: 0;
-	padding-top: 30px;
+	padding-top: 28px;
 	padding-left:20px;
-	padding-right: 20px;
+	padding-right: 15px;
 	font-size: 14px;
 	min-height:210px;
 	line-height: 14px;
@@ -720,19 +788,24 @@ nav {
 	font-size: 16px;
 	line-height: 22px;
 	color: #5a5a5a;
-	margin-bottom: 35px;
+	margin-bottom: 36px;
 }
 .subscription-form input {
 	display: inline-block;
 	vertical-align: top;
 	box-sizing:border-box;
-	width:360px;
+	width:368px;
 	border-radius:4px;
 	border:1px solid #d3d3d2;
-	padding: 10px 0px 10px 14px;
-	margin-right: 6px;
+	padding: 8px 0px 10px 14px;
+	margin-right: 10px;
 	font-size: 16px;
 	line-height: 24px;
+}
+.subscription-form .btn{
+	padding-left: 18px;
+	padding-right: 18px;
+
 }
 
 /**********************************************************************************************************************/
@@ -747,13 +820,13 @@ nav {
 	width:302px;
 	box-sizing: border-box;
 	min-height:305px;
-	top:50px;
+	top:62px;
 	right:27px;
 	background-color: #fefdfc;
 	border-radius: 15px;
 	text-align: center;
-	padding-top: 30px;
-	padding-left: 20px;
+	padding-top: 28px;
+	padding-left: 25px;
 	padding-right: 20px;
 }
 .contacts .description {
@@ -761,6 +834,7 @@ nav {
 	line-height: 20px;
 	color: #323232;
 	text-align: left;
+	padding-right: 60px;
 }
 .contacts .data,
 .contacts .data a {
@@ -771,9 +845,19 @@ nav {
 	text-align: left;
 	text-decoration: none;
 }
-.address,
+.address {
+	margin-bottom: 20px;
+}
 .phone-number {
-	margin-bottom: 23px;
+	margin-bottom: 25px;
+}
+.contacts .data {
+	line-height: 22px;	
+	margin-top: 4px;
+}
+.feedback-form-btn a {
+	padding-left: 29px;
+	padding-right: 29px;
 }
 /***Всплывающая форма обратной связи***/
 @keyframes bounce {
@@ -798,9 +882,9 @@ nav {
 	min-height:302px;
 	top:50%;
 	left:50%;
-	padding-top: 20px;
-	padding-right: 25px;
-	padding-bottom: 20px;
+	padding-top: 16px;
+	padding-right: 26px;
+	padding-bottom: 26px;
 	padding-left: 25px;
 	background-color: #f8f7f4;
 	border-radius: 15px;
@@ -824,7 +908,8 @@ nav {
 	position: absolute;
 	width: 100%;
 	height:2px;
-	right:0;
+	right:-2px;
+	top:4px;
 	border-radius:1px;
 	background-color: #000000;
 }
@@ -859,11 +944,12 @@ nav {
 	width:267px;
 	border-radius:4px;
 	border:1px solid #d3d3d2;
-	padding: 10px 0px 10px 14px;
+	padding: 10px 0px 8px 14px;
 	margin-right: 6px;
 	font-size: 16px;
 	line-height: 24px;
 	margin-bottom: 20px ;
+	color: #999999;
 }
 .feedback-form textarea {
 	display: block;
@@ -872,14 +958,14 @@ nav {
 	width: 100%;
 	border-radius: 4px;
 	border: 1px solid #d3d3d2;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 10px;
+	padding-top: 7px;
+	padding-left: 13px;
+	padding-right:0px;
+	padding-bottom:10px;
 	margin-right: 6px;
 	font-size: 16px;
 	line-height: 24px;
-	margin-bottom: 20px ;
+	margin-bottom: 25px ;
 	color: #999999;
 }
 .modal-overlay {
@@ -900,23 +986,24 @@ nav {
 
 .main-footer {
 	width:100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 16px;
+	padding-bottom: 24px;
 }
 .footer-social {
 	float: left;
 	width:267px;
 	margin-right: 26px;
-	padding-top: 15px;
+	padding-top: 16px;
 }
 .social-link {
 	display:inline-block;
 	vertical-align: top;
 	font-size: 0px;
 	border-radius:50%;
-	width:32px;
-	height:32px;
+	width:37px;
+	height:37px;
 	box-sizing:border-box;
+	margin-right: 8px;
 }
 .social-link-tw {
 	background: url("../img/tw-icon.svg")no-repeat center;
@@ -976,7 +1063,7 @@ nav {
 .additional-links {
 	float: left;
 	width:560px;
-	padding-top: 15px;
+	padding-top: 13px;
 }
 .additional-links-left,
 .additional-links-right {
@@ -990,7 +1077,7 @@ nav {
 .additional-links a{
 	display:block;
 	font-size:13px;
-	line-height: 18px;
+	line-height: 21px;
 	color:#ffffff;
 }
 .additional-links-left a {
@@ -1006,12 +1093,13 @@ nav {
 	width:15px;
 	height:15px;
 	background: url("../img/heart.svg") no-repeat center;
-	left:110px;
-	top:0;
+	left:107px;
+	top:2px;
 }
 .authors {
 	float: right;
-	width: 267px;
+	width: 191px;
+	padding-top:1px;
 }
 .sign {
 	font-size: 12px;
@@ -1025,11 +1113,6 @@ nav {
 }
 
 
-
-
-
-
-
 /************************************************************************************************************
 Gllacy-catalog.html
 *************************************************************************************************************/
@@ -1037,16 +1120,18 @@ Gllacy-catalog.html
 	margin: 0;
 	padding: 0;
 	list-style:none;
+	margin-top: -25px;
+	margin-bottom: 1px;
 }
 .breadcrumbs li {
 	display: inline;
 	position: relative;
-	padding-right: 20px;
+	padding-right: 16px;
 }
 .breadcrumbs li::after {
 	content:"»";
 	position:absolute;
-	right: 9px;
+	right: 7px;
 	color: #ffffff;
 }
 .breadcrumbs li:last-child::after {
@@ -1069,11 +1154,12 @@ Gllacy-catalog.html
 	line-height: 41px;
 	font-weight: 700;
 	color:#ffffff;
-	margin-bottom: 25px;
+	margin-bottom: 27px;
 }
 .filter-item {
 	display: inline-block;
 	vertical-align: top;
+	margin-right: 15px;
 }
 .filter-name {
 	font-size:14px;
@@ -1081,16 +1167,23 @@ Gllacy-catalog.html
 	color:#ffffff;
 	font-weight: 500px;
 	padding-left: 15px;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 }
 .sorting-direction {
 	height: 36px;
-	padding: 0 15px;
+	padding: 0 10px;
 	background-color: #aabcb2;
 	border-radius: 100px;
 	cursor: pointer;
 	color: #ffffff;
 	border:none;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+}
+.sorting-direction:hover {
+	background-color: #ffffff;
+	color:#000000;
 }
 .sorting-direction option {
 	background-color: #ffffff;
@@ -1115,31 +1208,31 @@ Gllacy-catalog.html
 	background-color: #d1dad3;
 }
 .range-controls .bar {
-	margin-left: 15px;
+	margin-left: 22px;
 	width: 100px;
 	height:4px;
 	background-color: #f8f7f4;
 }
 .range-controls .toggle {
 	position:absolute;
-	top:6px;
-	width:24px;
-	height:24px;
+	top:7px;
+	width:20px;
+	height:20px;
 	border-radius:50%;
 	background-color: #f8f7f4;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
 	cursor:pointer;
 }
 .range-controls .toggle:hover {
-	width:27px;
-	height:27px;
+	width:22px;
+	height:22px;
 	top:5px;
 }
 .range-controls .min-toggle {
-	left: 30px;
+	left: 36px;
 }
 .range-controls .max-toggle {
-	left: 125px;
+	left: 133px;
 }
 .price-controls input {
 	width: 30px;
@@ -1155,7 +1248,10 @@ Gllacy-catalog.html
 }
 /**************************************/
 .fat-check {
-	padding: 10px 15px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 15px;
+	padding-right: 15px;
 	background-color: #aabcb2;
 	border-radius: 100px;
 	color: #ffffff;
@@ -1166,22 +1262,23 @@ Gllacy-catalog.html
 }
 .fat-radio {
 	position: relative;
-	padding-left: 30px;
+	padding-left: 27px;
 	padding-right: 20px;
 	color: #ffffff;
-	font-size:14px;
-	line-height: 16px;
+	font-size:16px;
+	line-height: 18px;
 	font-weight: 500px;
 	cursor:pointer;
+	font-weight: 500;
 }
 .fat-radio:last-child {
 	padding-right: 0px;
 }
 .fat-radio input+.indicator {
 	position:absolute;
-	width: 20px;
-	height: 20px;
-	left:0;
+	width: 18px;
+	height: 18px;
+	left: -1px;
 	border-radius:50%;
 	border:4px solid #aabcb2;
 	box-shadow: 0 0 0 1px #f8f7f4;
@@ -1194,22 +1291,30 @@ Gllacy-catalog.html
 .fat-radio input+.indicator:hover {
 	box-shadow: 0 0 0 2px #f8f7f4;
 	border:3px solid #aabcb2;
-	width:20px;
-	height:20px;
+	width:16px;
+	height:16px;
 }
 /*****************************************/
 .filter-block1 {
+	margin-bottom: 14px;
+	font-size: 0px;
+}
+.filter-block2 {
 	margin-bottom: 15px;
+	font-size: 0px;
 }
 .additive-check input {
 	display:none;
 }
 .additive-check {
-	padding: 10px 15px;
+	padding: 9px 15px;
 	background-color: #aabcb2;
 	border-radius: 100px;
 	color: #ffffff;
 	border:none;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
 }
 .additive-item {
 	position:relative;
@@ -1225,7 +1330,8 @@ Gllacy-catalog.html
 	background: url("../img/checkbox-unchecked.svg") no-repeat;
 	width:20px;
 	height:20px;
-	left:0;	
+	left:-1px;
+	top: -1px;	
 }
 .additive-item input:checked+.check-indicator {
 	background: url("../img/checkbox-checked.svg");
@@ -1234,7 +1340,7 @@ Gllacy-catalog.html
 	background: url("../img/checkbox-checked-hover.svg");
 }
 .additive-item input+.check-indicator:hover  {
-		background: url("../img/checkbox-unchecked-hover.svg");
+	background: url("../img/checkbox-unchecked-hover.svg");
 }
 
 .btn-filter {
@@ -1247,8 +1353,9 @@ Gllacy-catalog.html
 	padding:7px 27px;
 	background-color: #a6b7ae;
 	border-radius:100px;
-	margin-top: 21px;
+	margin-top: 23px;
 	cursor:pointer;
+	font-family: "Roboto", "Arial", sans-serif;
 }
 .btn-filter:hover {
 	background-color: #fbfcfb;
@@ -1266,18 +1373,20 @@ Gllacy-catalog.html
 	padding-bottom: 8px;
 }
 .product-filter {
-	margin-bottom: 40px;
+	margin-bottom: 35px;
+	font-family: "Roboto", "Arial", sans-serif;
 }
 
 /**************************************************/
 .product-list {
-	margin-left: -12.5px;
+	margin-left: -5px;
+
 	font-size:0px;
-	margin-bottom: 80px;
+	margin-bottom: 45px;
 }
 .product-item {
 	position:relative;
-	margin-bottom: 15px;
+	margin-bottom: 8px;
 }
 .product-area {
 	display: inline-block;
@@ -1285,7 +1394,7 @@ Gllacy-catalog.html
 	width:277px;
 	font-size:16px;
 	vertical-align:top;
-	margin-left: 12.5px;
+	margin-right: 16px;
 	text-align:center;
 	position: relative;
 	padding-top: 5px;
@@ -1294,9 +1403,17 @@ Gllacy-catalog.html
 	padding-bottom: 20px;
 	margin-bottom: -40px;
 }
+.product-area:nth-child(4n) {
+	margin-right: -5px;
+}
 .view-btn{
 	visibility:hidden;
 	width:100%;
+}
+.view-btn .btn {
+	padding-right: 18px;
+	padding-left: 18px;
+
 }
 .product-area .product-name {
 	display:inline-block;
@@ -1308,6 +1425,7 @@ Gllacy-catalog.html
 	font-weight: 500;
 	margin-bottom: 10px;
 	text-decoration: underline;
+	padding: 0px 6px;
 }
 .product-area:hover .product-name {
 	text-decoration: none;
@@ -1331,6 +1449,7 @@ Gllacy-catalog.html
 	font-size: 0;
 	width:100%;
 	text-align: right;
+	margin-bottom: 34px;
 }
 .pagination-item  {
 	display: inline-block;
@@ -1345,14 +1464,18 @@ Gllacy-catalog.html
 	text-align: center;
 	text-decoration: none;
 	border-radius:50%;
+	margin-right: 4px;
 }
 .prev {
 	font-size:0px;
 	background: url("../img/prev(mark-for-pagination).svg") no-repeat center;
+	margin-right: 6px;
+
 }
 .next {
 	font-size:0px;
 	background: url("../img/next(mark-for-pagination).png") no-repeat center;
+	margin-right:-9px;
 }
 .pagination-item[href]:hover {
 	background-color: #9db1a5;
@@ -1368,4 +1491,7 @@ Gllacy-catalog.html
 .pagination-list .next:active {
 	background: url("../img/next(mark-for-pagination)-active.png") no-repeat center;
 	background-color: #ffffff;
+}
+.end-line{
+	border-top:1px solid #a9bbb1;
 }
