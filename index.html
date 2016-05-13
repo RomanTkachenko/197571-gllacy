@@ -5,10 +5,8 @@
 	<title>Глейси</title>
 	
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-
 	<link rel="stylesheet" href="css/normalize.css">
-
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style-min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -76,12 +74,13 @@
 							</form>
 						</li>
 						<li class="basket-btn">
-							<a class="basket-content" href="#">Пусто</a>
-							<div class="basket-form" action="#">
+							<a class="basket-empty" href="#">Пусто</a>
+							<!--
+							<div class="basket-form">
 								<table class="basket-table">
 									<tr>
 										<td class="col-1">
-										<a href="#"><img src="img/x-mark(for-forms).svg" width="11" height="11"></a>
+										<a href="#"><img src="img/x-mark(for-forms).svg" width="11" height="11" alt="delete item"></a>
 										</td>
 										<td class="col-2" ><img src="img/ice-cream-small-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
 										<td class="col-3">Пломбир с апельсиновым джемом</td>
@@ -90,7 +89,7 @@
 									</tr>
 									<tr>
 										<td>
-										<a href="#"><img src="img/x-mark(for-forms).svg" width-"11" height="11"></a>
+										<a href="#"><img src="img/x-mark(for-forms).svg" width="11" height="11" alt="delete item"></a>
 										</td>
 										<td><img src="img/ice-cream-small-2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
 										<td>Клубничный пломбир с присыпкой из белого шоколада</td>
@@ -105,6 +104,7 @@
 								<a class="btn">Оформить заказ</a>
 								</div>
 							</div>
+						-->
 						</li>
 					</ul>
 				</nav>
@@ -157,7 +157,7 @@
 					<div class="hit-1">
 						<div class="hit-image">
 							<div class="hit-mark">
-								<img src="img/hit-label.png" width="61" height="61">
+								<img src="img/hit-label.png" width="61" height="61" alt="Хит">
 							</div>
 							<img src="img/item-1.png" width="267" height="267" alt="Сливочное мороженное с апельсиновым джемом и цитрусовой стружкой">
 							<div class="item-price">310<img src="img/ru-currency.svg" width="32" height="37" alt="руб."><span>/кг</span></div>
@@ -168,7 +168,7 @@
 					<div class="hit-2">
 						<div class="hit-image">
 							<div class="hit-mark">
-								<img src="img/hit-label.png" width="61" height="61">
+								<img src="img/hit-label.png" width="61" height="61" alt="Хит">
 							</div>
 							<img src="img/item-2.png" width="267" height="267" alt="Сливочно-кофейное мороженное с кусочками шоколада">
 							<div class="item-price">380<img src="img/ru-currency.svg" width="32" height="37" alt="руб."><span>/кг</span></div>
@@ -179,7 +179,7 @@
 					<div class="hit-3">
 						<div class="hit-image">
 							<div class="hit-mark">
-								<img src="img/hit-label.png" width="61" height="61">
+								<img src="img/hit-label.png" width="61" height="61" alt="Хит">
 							</div>
 							<img src="img/item-3.png" width="267" height="267" alt="Сливочно-клубничное мороженное с присыпкой из белого шоколада">
 							<div class="item-price">355<img src="img/ru-currency.svg" width="32" height="37" alt="руб."><span>/кг</span></div>
@@ -190,7 +190,7 @@
 					<div class="hit-4">
 						<div class="hit-image">
 							<div class="hit-mark">
-								<img src="img/hit-label.png" width="61" height="61">
+								<img src="img/hit-label.png" width="61" height="61" alt="Хит">
 							</div>
 							<img src="img/item-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
 							<div class="item-price">415<img src="img/ru-currency.svg" width="32" height="37" alt="руб."><span>/кг</span></div>
@@ -248,7 +248,9 @@
 							</div>
 							<div class="description">(с 10 до 20 ежедневно)</div>
 						</div>
-						<div class="feedback-form-btn"><a class="hhh btn" href="#">Форма обратной связи</a></div>
+						<div class="feedback-form-btn">
+						<a class="btn" href="#">Форма обратной связи</a>
+						</div>
 					</div>
 				</div>
 
@@ -295,48 +297,7 @@
 		</div>
 	</div>
 
-	<script>
-		var link = document.querySelector(".feedback-form-btn");
-		var popup=document.querySelector(".modal-content");
-		var close=popup.querySelector(".modal-content-close");
-		var overlay=document.querySelector(".modal-overlay");
-		var name1=popup.querySelector("[name=user-name]");
-		var email=popup.querySelector("[name=user-email]");
-		var form=popup.querySelector("form");
-
-
-		link.addEventListener("click", function(event) {
-			event.preventDefault();
-			popup.classList.add("modal-content-show");
-			overlay.classList.add("modal-overlay-show");
-			name1.focus("");
-		});
-
-		close.addEventListener("click", function(event){
-			event.preventDefault();
-			popup.classList.remove("modal-content-show");
-			overlay.classList.remove("modal-overlay-show");
-		});
-/*
-		form.addEventListener("submit", function(event){
-			if(!name1.value||!email.value){
-			event.preventDefault();	
-			console.log("Нужно ввести логин и пароль");
-			}
-		});
-		*/
-		window.addEventListener("keydown", function(event){
-if(event.keyCode===27){
-	if(popup.classList.contains("modal-content-show")){
-		popup.classList.remove("modal-content-show");
-		overlay.classList.remove("modal-overlay-show");
-	}
-}
-		});
-
-		
-
-	</script>
+	<script src="js/popup-min.js">	</script>
 
 </body>
 </html>
